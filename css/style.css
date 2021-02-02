@@ -1,0 +1,170 @@
+html {
+    max-width: 1900px;
+    min-width: 320px;
+}
+
+/* title */
+.title-img-container {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.title-img-inner {
+    position: relative;
+    height: 0;
+    border: none;
+}
+
+.title-img-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+}
+
+.title-img-1-2 {
+    padding-top: 49%;
+}
+
+.title-img-div {
+    width: 4000px;
+    height: 4000px;
+    border-radius: 50%;
+    background-image: url("../img/fest.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    animation: spin 2s linear infinite;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-img-div img {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.title-img-div img:last-child {
+    transition: right 1s ease;
+    right: 0;
+}
+.title-img-div img:first-child {
+    transition: left 1s ease;
+    left: 0;
+}
+
+.title-img-div:hover img:last-child{
+    right: -40%;
+}
+.title-img-div:hover img:first-child{
+    left: -40%;
+}
+
+.title-mobile-div {
+    display: none;
+    width: 4000px;
+    height: 4000px;
+    border-radius: 50%;
+    background-image: url("../img/fest.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    animation: spin 2s linear infinite;
+    justify-content: space-between;
+}
+
+.title-mobile-div img {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+.title-mobile-div img:last-child {
+    transition: right 1s ease;
+    right: 0;
+}
+.title-mobile-div img:first-child {
+    transition: left 1s ease;
+    left: 0;
+}
+
+.title-mobile-div:hover img:last-child{
+    right: -20%;
+}
+.title-mobile-div:hover img:first-child{
+    left: -40%;
+}
+
+
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.pictures div {
+    flex-basis: 350px;
+    /* margin-bottom: 50px; */
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    position: relative;
+    animation: levitation infinite alternate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+.type-1 {
+    animation-duration: 1.5s !important;
+}
+.type-3 {
+    animation-duration: 0.5s !important;
+}
+
+@keyframes levitation {
+    0% {top: -30px;}
+    100% {top: 0px;}
+}
+
+.pictures div:hover {
+    animation-play-state: paused;
+}
+
+.small-picture {
+    background-size: 60% !important;
+}
+
+.type-1 {
+    background-image: url(../img/picture1.png);
+}
+.type-2 {
+    background-image: url(../img/picture2.png);
+}
+.type-3 {
+    background-image: url(../img/picture3.png);
+}
+
+footer {
+    margin-top: 200px;
+    width: 100%;
+    background-image: url(../img/fallen.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+footer img {
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 25%;
+}
